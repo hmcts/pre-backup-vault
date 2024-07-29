@@ -1,6 +1,8 @@
 resource "azurerm_resource_group" "this" {
   name     = "${var.product}-${var.env}-backup"
   location = var.location_backup
+
+  tags = var.common_tags
 }
 
 resource "azurerm_data_protection_backup_vault" "this" {
@@ -9,6 +11,8 @@ resource "azurerm_data_protection_backup_vault" "this" {
   location            = var.location
   datastore_type      = "VaultStore"
   redundancy          = "LocallyRedundant"
+
+  tags = var.common_tags
   identity {
     type = "SystemAssigned"
   }
@@ -22,9 +26,9 @@ resource "azurerm_role_assignment" "backup_contributor" {
 }
 
 resource "azurerm_data_protection_backup_policy_blob_storage" "this" {
-  name               = "${var.product}-backup-policy-${var.env}"
-  vault_id           = azurerm_data_protection_backup_vault.this.id
-  retention_duration = var.retention_duration
+  name                                   = "${var.product}-backup-policy-${var.env}"
+  vault_id                               = azurerm_data_protection_backup_vault.this.id
+  operational_default_retention_duration = var.retention_duration
 }
 
 resource "azurerm_data_protection_backup_instance_blob_storage" "this" {
