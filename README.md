@@ -1,18 +1,15 @@
 # pre-backup-vault
-<!-- BEGIN_TF_DOCS -->
-## Requirements
 
-No requirements.
+Module for creating a backup vault and associated resurces. https://learn.microsoft.com/en-us/azure/backup/backup-vault-overview
+
+<!-- BEGIN_TF_DOCS -->
+
 
 ## Providers
 
 | Name | Version |
 |------|---------|
 | <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | n/a |
-
-## Modules
-
-No modules.
 
 ## Resources
 
