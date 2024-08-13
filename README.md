@@ -28,6 +28,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | n/a | `map(string)` | n/a | yes |
 | <a name="input_env"></a> [env](#input\_env) | n/a | `any` | n/a | yes |
 | <a name="input_location"></a> [location](#input\_location) | n/a | `any` | n/a | yes |
 | <a name="input_location_backup"></a> [location\_backup](#input\_location\_backup) | n/a | `string` | `"UK West"` | no |
