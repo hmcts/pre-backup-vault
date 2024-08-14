@@ -26,6 +26,6 @@ variable "storageaccount_ids" {
 
 variable "rg_name" {}
 
-variable "common_tags" {
+variable "tags" {
   type = map(string)
 }

@@ -25,7 +25,6 @@ Module for creating a backup vault and associated resurces. https://learn.micros
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | n/a | `map(string)` | n/a | yes |
 | <a name="input_env"></a> [env](#input\_env) | n/a | `any` | n/a | yes |
 | <a name="input_location"></a> [location](#input\_location) | n/a | `any` | n/a | yes |
 | <a name="input_location_backup"></a> [location\_backup](#input\_location\_backup) | n/a | `string` | `"UK West"` | no |
@@ -34,6 +33,7 @@ Module for creating a backup vault and associated resurces. https://learn.micros
 | <a name="input_rg_name"></a> [rg\_name](#input\_rg\_name) | n/a | `any` | n/a | yes |
 | <a name="input_role_assignments"></a> [role\_assignments](#input\_role\_assignments) | List of roles to assign to the provided Managed Identity | `list(string)` | <pre>[<br>  "Storage Account Backup Contributor"<br>]</pre> | no |
 | <a name="input_storageaccount_ids"></a> [storageaccount\_ids](#input\_storageaccount\_ids) | List of storage accounts to take a backup of | `list(string)` | `[]` | no |
+| <a name="input_tags"></a> [tags](#input\_tags) | n/a | `map(string)` | n/a | yes |
 
 ## Outputs
 
