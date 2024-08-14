@@ -2,7 +2,7 @@ resource "azurerm_resource_group" "this" {
   name     = "${var.product}-${var.env}-backup"
   location = var.location_backup
 
-  tags = var.common_tags
+  tags = var.tags
 }
 
 resource "azurerm_data_protection_backup_vault" "this" {
@@ -12,7 +12,7 @@ resource "azurerm_data_protection_backup_vault" "this" {
   datastore_type      = "VaultStore"
   redundancy          = "LocallyRedundant"
 
-  tags = var.common_tags
+  tags = var.tags
   identity {
     type = "SystemAssigned"
   }
